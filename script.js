@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'zh-tw': '查看繁體中文頁面',
     };
     const hrefByLocale = {
-        en: '/',
-        'zh-cn': '/zh-cn',
-        'zh-tw': '/zh-tw',
+        en: '/swift-craft-launcher-web.github.io/',
+        'zh-cn': '/swift-craft-launcher-web.github.io/zh-cn',
+        'zh-tw': '/swift-craft-launcher-web.github.io/zh-tw',
     };
 
     // 如果页面语言和浏览器语言不一致，显示提示
@@ -103,5 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
 
 
