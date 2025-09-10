@@ -29,6 +29,10 @@
         --color-footer-text: #d2d2d7;
         --color-footer: var(--color-footer-text);
         --color-link: #0070c9;
+        --color-button-gray-hover: var(--color-white);
+        --color-button-gray-text: #f5f5f7;
+        --color-button-gray-active: #1f1f22;
+        --color-button-gray-text-hover: var(--color-black);
       }
     </style>
 </head>
@@ -36,7 +40,7 @@
 <body class="bg-gray-950">
   <header
     class="flex items-center px-5 text-gray-50 h-[52px] sticky w-full z-1 top-0 bg-header border-b-1 border-b-header-border backdrop-blur-xl lg:justify-center lg:px-30">
-    <div class="w-full h-full max-w-[1280px] flex justify-between items-center transition-all">
+    <div class="w-full h-full max-w-[1280px] flex justify-between items-center">
       <h1 class="font-bold text-xl">Swift Craft Launcher</h1>
       <div class="flex gap-8 items-center text-xs h-full">
         <p class="items-center border-b-1 border-b-header-border-active h-full mt-[2px] hidden lg:flex">
@@ -49,189 +53,204 @@
       </div>
     </div>
   </header>
-  <main class="min-h-lvh flex flex-col items-center">
-    <section class="section-1 flex items-center justify-center text-gray-50 h-[100svh]">
-      <div class="flex flex-col items-center justify-center">
-        <div class="main-icon flex justify-center items-center mb-5 relative w-48 h-48 lg:w-72 lg:h-72 lg:mb-10">
-          <img
-            src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
-            alt class="w-40 h-40 absolute top-4 left-4 blur-2xl lg:w-64 lg:h-64" />
-          <img
-            src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
-            alt class="absolute top-0 left-0" />
-        </div>
-        <h1 class="title text-3xl font-bold mb-1 lg:text-7xl lg:mb-4">Swift Craft Launcher</h1>
-        <p class="subtitle font-bold text-lg mb-8 lg:text-xl">
-          专为 macOS 设计的现代化 Minecraft 启动器
-        </p>
-        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
-          class="download-button py-1.25 px-3.5 rounded-full bg-button-blue hover:bg-button-blue-hover active:bg-button-blue-active text-white">下载</a>
-        <p class="opacity-56 text-sm mt-3.5">适用于 macOS 14.0 或更高版本</p>
+  <main class="min-h-lvh">
+    <section class="flex flex-col items-center text-gray-50 max-h-[100svh] px-5 text-center pt-15 md:pt-27.5 overflow-hidden">
+      <div class="relative w-32 h-32 lg:w-48 lg:h-48">
+        <img
+          src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+          alt class="w-24 h-24 absolute top-4 left-4 blur-2xl lg:w-40 lg:h-40" />
+        <img
+          src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+          alt class="z-0 relative" />
       </div>
+      <h1 class="title text-3xl font-bold mb-5 lg:text-5xl mt-2">
+        Swift Craft Launcher
+      </h1>
+      <p class="subtitle font-semibold text-lg max-w-xl lg:text-2xl lg:max-w-2xl text-gray-800">
+        Swift Craft Launcher 是一款采用 SwiftUI 构建的原生 macOS Minecraft 启动器，提供流畅高效的游戏体验。
+        专为现代 macOS 系统设计，集成全面的模组加载器支持、Microsoft 账户认证和直观的游戏管理功能。
+      </p>
+      <p class="mt-5 text-gray-800">
+        适用于 macOS 14.0 或更高版本
+      </p>
+      <div class="flex gap-3 mt-6">
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+          class="py-4.25 px-7.5 rounded-full hover:bg-button-gray-hover hover:text-button-gray-text-hover active:bg-button-blue-active text-button-gray-text border-1 border-button-gray-text">
+          进一步了解
+        </a>
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
+          class="py-4.25 px-7.5 rounded-full hover:bg-button-gray-hover hover:text-button-gray-text-hover active:bg-button-blue-active text-button-gray-text border-1 border-button-gray-text">
+          下载
+        </a>
+      </div>
+      <img src="../Slice.png" alt="Swift Craft Launcher 界面展示" class="max-w-lvw sm:px-20 lg:max-w-7xl xl:px-0 relative">
     </section>
     <!-- Contributors List -->
-    <section class="text-gray-50 flex flex-col max-w-[1280px] w-full mb-[52px]  px-10 sm:px-20 md:px-25 lg:px-10">
-      <h1 class="text-2xl mb-7 lg:text-3xl">主要贡献者</h1>
-      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <img
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
-            src="https://avatars.githubusercontent.com/u/48873455?v=4" alt=""></img>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="https://github.com/suhang12332" target="_blank"
-                rel="noopener noreferrer" class="text-link hover:underline">suhang12332</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">开发、设计</p>
-            </span>
+    <section
+      class="text-gray-50 flex mb-[52px] px-10 sm:px-20 md:px-25 lg:px-10 pt-27.5 justify-center">
+      <div class="flex flex-col max-w-[1280px] w-full">
+        <h1 class="text-2xl mb-7 lg:text-3xl">主要贡献者</h1>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <img
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
+              src="https://avatars.githubusercontent.com/u/48873455?v=4" alt=""></img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/suhang12332" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">suhang12332</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">开发、设计</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            🎨</img>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="" target="_blank" rel="noopener noreferrer"
-                class="text-link hover:underline">喵凹条</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">设计</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              🎨</img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="" target="_blank" rel="noopener noreferrer"
+                  class="text-link hover:underline">喵凹条</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">设计</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👨‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">CarnonLee</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">开发</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👨‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">CarnonLee</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">开发</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👨‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="https://github.com/jiangyin14" target="_blank"
-                rel="noopener noreferrer" class="text-link hover:underline">jiangyin14</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">开发</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👨‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/jiangyin14" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">jiangyin14</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">开发</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            🔧</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">逗趣狂想</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">基础设施</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              🔧</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">逗趣狂想</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">基础设施</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👩‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">Nzcorz</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">开发</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">Nzcorz</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">开发</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👩‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">桜子ちゃん</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">开发</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">桜子ちゃん</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">开发</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            🎨</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="https://github.com/chencomcdyun" target="_blank"
-                rel="noopener noreferrer" class="text-link hover:underline">ZeroSnow</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">设计</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              🎨</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/chencomcdyun" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">ZeroSnow</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">设计</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <img
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
-            src="https://s2.loli.net/2025/08/31/KLGzDOtQ3A9qFxE.jpg" alt="🎨"></img>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="https://space.bilibili.com/508878020" target="_blank"
-                rel="noopener noreferrer" class="text-link hover:underline">猫白GAF</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">设计</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <img
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
+              src="https://s2.loli.net/2025/08/31/KLGzDOtQ3A9qFxE.jpg" alt="🎨"></img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://space.bilibili.com/508878020" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">猫白GAF</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">设计</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👩‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">小希Lusiey_</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">测试</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">小希Lusiey_</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">测试</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👩‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">骑老奶奶过马路</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">测试</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">骑老奶奶过马路</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">测试</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👩‍💻</p>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold">laiTM</h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">测试</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">laiTM</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">测试</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <img
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
-            src="https://youke1.picui.cn/s1/2025/09/09/68c01b15df421.png"></img>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="https://github.com/rayanceking" target="_blank"
-                rel="noopener noreferrer" class="text-link hover:underline">RayanceKing</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">开发</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <img
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
+              src="https://youke1.picui.cn/s1/2025/09/09/68c01b15df421.png"></img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/rayanceking" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">RayanceKing</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">开发</p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
-          <p
-            class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
-            👨‍💻</img>
-          <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
-            <h3 class="text-xl font-semibold"><a href="https://space.bilibili.com/582129140" target="_blank"
-                rel="noopener noreferrer" class="text-link hover:underline">iCold</a></h3>
-            <span class="flex gap-1">
-              <p class="text-sm text-50 lg:text-lg">前端</p>
-            </span>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👨‍💻</img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://space.bilibili.com/582129140" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">iCold</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">前端</p>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -242,7 +261,7 @@
     <div class="w-full max-w-[1920px]">
       <div class="flex flex-col h-full">
         <!-- Logo -->
-        <div class="pb-7 items-center hidden md:flex">
+        <div class="pb-7 items-center hidden md:flex lg:pb-13.5">
           <img class="w-20 h-20 mr-5"
             src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
             alt />
